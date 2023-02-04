@@ -1,11 +1,11 @@
 // Nav
 import React from "react";
-import { useState, useEffect } from "react";
+//import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/main-nav.css";
 import heart from '../components/images/heart.png';
 import abouticon from '../components/images/abouticon.jpg';
-import Search from "../components/Search";
+//import Search from "../components/Search";
 
 
 const Nav = () => {
@@ -33,11 +33,6 @@ const Nav = () => {
           <li>
             <NavLink to="/favs" activeClassName="active" className="nav-link"> <img className="" src={heart}  style={{ width: '80px', height: '85px', border:'1px solid black' }} alt=''/></NavLink>
           </li>  
-
-          
-            <Search/>
-          
-  
         </ul>
       </nav>
     </header>

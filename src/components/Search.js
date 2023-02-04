@@ -14,7 +14,7 @@ import {IMG_URL} from "../globals/globals";
 const Search = () => {
     const [movies, setMovies] = useState([]);
     const [search, setSearch] = useState('');
-    const [searchresults, setSearchResults] = useState([]);
+   // const [searchresults, setSearchResults] = useState([]);
       //return value in search box
     const handleSubmit = (e) => {
         e.preventDefault();
