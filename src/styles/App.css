@@ -1,0 +1,38 @@
+/* .App {
+  text-align: center;
+
+} */
+
+/*body {
+  background-color: black;
+  /*change the below to a separate file or add right in the component*/
+  /*background-image: url('../components/images/lrgPopcornBG.jpg');
+  
+} */
+
+/* h1 {
+  font-size: 8rem;
+  /* color:#D5BB8D; */
+  /*text-align: left;
+  margin-left:2.25cm;
+  margin-top: 5cm;
+} */
+
+.admit-btn {
+  text-align: left;
+  margin-left:11.5cm;
+  margin-top: 5cm;
+}
+
+.loginForm {
+  margin-left: 10cm;
+  font-size: 2rem;
+  color:#D5BB8D;
+  margin-top: 4cm;
+}
+
+.loginbtn {
+  margin-left:2.25cm;
+}
+
+
