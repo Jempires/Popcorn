@@ -1,9 +1,19 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { localAppStorage } from '../../globals/globals';
 
+// Retrieving favorited movies from local storage
 function getFavoritesList() {
 
-    let favoritesList = localStorage.retrieveItem(localAppStorage);
+    // Store data retrieved from local storage in variable
+    let favoritesList = localStorage.getItem(localAppStorage);
 
-    
+    // Checking for favorited movies if any
+    if(favoritesList === null) {
+        // if not favorites, set list to empty array 
+        favoritesList = [];
+    }else{
+        // JSON.parse to convert storage data string into object
+        favoritesList = JSON.parse(favoritesList);
+    }
+    return favoritesList;
 }
