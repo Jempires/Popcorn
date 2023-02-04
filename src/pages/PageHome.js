@@ -48,36 +48,6 @@ function Home() {
 
 
             </Tabs>
-
-            {/*This is the main layout for displaying the movies in each category*/}
-            <main>
-              <div className="grid-container">
-        
-                  <div className="item2">
-                      <h2 id="toprated">Top Rated</h2>
-                      <br></br>
-                    <TopRatedMovies /> 
-                  </div>
-                    
-                  <div className="item3" >
-                      <h2 id="popular">Popular</h2>
-                      <br></br>
-                      <PopularMovies/>
-                  </div>
-
-                  <div className="item4">
-                      <h2 id="nowplaying">Now Playing</h2>
-                      <br></br>
-                      <NowPlayingMovies/> 
-                  </div>
-
-                  <div className="item5">
-                      <h2 id="upcoming">Upcoming</h2>
-                      <br></br>
-                      <UpcomingMovies/>
-                  </div> 
-              </div> 
-            </main>        
     
       </div>
   );

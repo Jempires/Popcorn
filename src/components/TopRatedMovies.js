@@ -30,7 +30,7 @@ const MovieCardTopRated = ({ movie }) => {
         <img  src={`${IMG_URL}/original/${movie.poster_path}`}
                         alt={movie.title} />
 
-          <p className="userscrore"> {movie.vote_average}</p> 
+          <p className="userscore"> {movie.vote_average}</p> 
           <p className="description"> {movie.overview}</p> 
      
           {/* https://api.themoviedb.org/3/movie/157336?api_key={api_key} */}
