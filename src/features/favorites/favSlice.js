@@ -17,3 +17,18 @@ function getFavoritesList() {
     }
     return favoritesList;
 }
+
+// Setting initial state for retrieiving stored favorites list
+const initialState = {
+    favItems: getFavoritesList()
+}
+
+
+// Reducer to manage the state (e.g., add, remove, update)
+
+
+
+
+
+
+
