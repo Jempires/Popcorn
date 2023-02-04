@@ -30,11 +30,10 @@ const MovieCardTopRated = ({ movie }) => {
         <img  src={`${IMG_URL}/original/${movie.poster_path}`}
                         alt={movie.title} />
 
-         {/* <h3  className="hover">{movie.title}</h3>
-        <p className="hover">Rating: {movie.vote_average}</p> 
-         <p className="hover">descriphfg,j.: {movie.description}</p> 
-         button for more info page */}
-
+          <p className="userscrore"> {movie.vote_average}</p> 
+          <p className="description"> {movie.overview}</p> 
+     
+          {/* https://api.themoviedb.org/3/movie/157336?api_key={api_key} */}
         
       </div>
   );

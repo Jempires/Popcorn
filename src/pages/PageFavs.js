@@ -1,6 +1,6 @@
 import React from "react";
-import admitOne from '../components/images/admitOne.jpg';
-import { Link } from "react-router-dom";
+//import admitOne from '../components/images/admitOne.jpg';
+//import { Link } from "react-router-dom";
 
 //import Nav from '../components/Nav'
 

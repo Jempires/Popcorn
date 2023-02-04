@@ -1,11 +1,9 @@
 // Nav
 import React from "react";
-//import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import "../styles/main-nav.css";
+import "../styles/App.css";
 import heart from '../components/images/heart.png';
 import abouticon from '../components/images/abouticon.jpg';
-//import Search from "../components/Search";
 
 
 const Nav = () => {
@@ -16,26 +14,44 @@ const Nav = () => {
   }
 
   return (
-    <header>
-      <nav className="main-nav" onClick={blur}>
-        <ul>
-    
+  
+        <header>
+          <nav className="main-nav" onClick={blur}>
+            <ul>
+        
 
-          <li>
-            <NavLink to="/home" activeClassName="active" className="nav-link">Home</NavLink>
-          </li>
+              <li>
+                <NavLink to="/home" activeClassName="active" className="nav-link">Home</NavLink>
+              </li>
 
-          <li>
-            <NavLink to="/about" activeClassName="active" className="nav-link"><button type="submit"><img className="" src={abouticon}  style={{ width: '80px', height: '85px', border:'1px solid black' }} alt=''/></button>
-            </NavLink>
-          </li>
+              <li>
+                <NavLink to="/about" activeClassName="active" className="nav-link"><button type="submit"><img className="" src={abouticon}  style={{ width: '80px', height: '85px', border:'1px solid black' }} alt=''/></button>
+                </NavLink>
+              </li>
 
-          <li>
-            <NavLink to="/favs" activeClassName="active" className="nav-link"> <img className="" src={heart}  style={{ width: '80px', height: '85px', border:'1px solid black' }} alt=''/></NavLink>
-          </li>  
-        </ul>
-      </nav>
-    </header>
+              <li>
+                <NavLink to="/favs" activeClassName="active" className="nav-link"> <img className="" src={heart}  style={{ width: '80px', height: '85px', border:'1px solid black' }} alt=''/></NavLink>
+              </li>  
+         
+      
+              {/* <li>
+                <NavLink to="/toprated" activeClassName="active" className='categories'>Top Rated</NavLink>
+              </li>
+
+              <li>
+                <NavLink to="/popular" activeClassName="active" className='categories'>Popular</NavLink>
+              </li>
+
+              <li>
+                <NavLink to="/nowplaying" activeClassName="active" className='categories'> Now Playing</NavLink>
+              </li>
+
+              <li>
+                <NavLink to="/upcoming" activeClassName="active" className='categories'> Upcoming</NavLink>
+              </li> */}
+              </ul>
+          </nav>
+        </header>
   );
 }
 
