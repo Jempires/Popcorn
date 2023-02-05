@@ -9,15 +9,17 @@ import { BASE_URL, API_KEY } from '../globals/globals';
 
 function TopRatedMovies() {
   const [movies, setMovies] = useState([]);
-  const [movie, setMovie] = useState({});
+   const [movie, setMovie] = useState({});
   const [movieInfo, setMovieInfo] = useState({});
+ 
   // let {id} = useParams();
   
   const handleClick = async (id) => {
-   
-      const fetchedResult = await fetch(`${BASE_URL}/${movie.id}?api_key=${API_KEY}`);
+    
+    const fetchedResult = await fetch(`${BASE_URL}/${movie.id}?api_key=${API_KEY}`);
+      
+      setMovieInfo(movieInfo);
       let movie = await fetchedResult.json();
-      setMovieInfo(movie);
       // history.push(`/movie/${id}`, { movie: data });
     };
 
@@ -44,7 +46,6 @@ function TopRatedMovies() {
 const MovieCardTopRated = ({ movie }) => {
 
 
-    console.log(this.state.data)
   return (
     <div>
         <div>
@@ -52,10 +53,10 @@ const MovieCardTopRated = ({ movie }) => {
             pathname:`/moreInfo/${movie.id}/details`,
           state:{movie}
           }}>
-            <button variant='primary' className='more-info'>View More</button> 
+            <button variant='primary' className='more-info' >View More</button> 
           </Link> 
         </div>
-
+        {/* onClick={handleClick} */}
 
         <img className="user-icon"  src={userRatingIcon} alt=''/>
      
