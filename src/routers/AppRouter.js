@@ -5,32 +5,39 @@
 
 // AppRouter
 // Router Components
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 // Components
 import Header from "../components/Header";
 //import Footer from "../components/Footer";
-
+// import TopRatedMovies from "../components/TopRatedMovies";
+// import UpcomingMovies from "../components/UpcomingMovies";
+// import NowPlayingMovies from "../components/NowPlayingMovies";
+// import PopularMovies from "../components/PopularMovies";
+// import PageLogin from "../pages/PageLogin";
+//import PageRegister from "../pages/PageRegister";
+// import PageLanding from "../pages/PageLanding";
 
 
 // Pages
 import PageHome from "../pages/PageHome";
 import PageAbout from "../pages/PageAbout";
-// import PageLanding from "../pages/PageLanding";
+
 import PageFavs from "../pages/PageFavs";
-// import PageLogin from "../pages/PageLogin";
+
 import PageMoreInfo from "../pages/PageMoreInfo";
-//import PageRegister from "../pages/PageRegister";
+
 import PageNotFound from "../pages/PageNotFound";
-import TopRatedMovies from "../components/TopRatedMovies";
-import UpcomingMovies from "../components/UpcomingMovies";
-import NowPlayingMovies from "../components/NowPlayingMovies";
-import PopularMovies from "../components/PopularMovies";
+
+// import SingleMovie from './SingleMovie';
+
+import { BrowserRouter as Router, Switch, Route, Routes } from 'react-router-dom';
+import React from 'react';
 
 function AppRouter() {
   
     return (
-      <BrowserRouter>
+      <Router>
         <div className="wrapper">
           <Header />
           <main>
@@ -41,30 +48,25 @@ function AppRouter() {
                {/* <Route path="/login" element={<PageLogin />} /> */}
              
              {/* Main Navigation routes */}
+             
               <Route path="/about" element={<PageAbout />} />
               <Route path="/home" element={<PageHome />} />
               <Route path="/favs" element={<PageFavs />} />
               <Route path="/moreInfo" element={<PageMoreInfo />} />
               <Route path="*" element={<PageNotFound />} />
-          
-
-            {/* Sub Naviagtion routes */}
-              {/* <Route path="/toprated"><TopRatedMovies/></Route>
-              <Route path="/upcoming"><UpcomingMovies/></Route>
-              <Route path="/nowplaying"><NowPlayingMovies /></Route>
-              <Route path="/popular"><PopularMovies/></Route>
- */}
-
-
+            
+              {/* <Switch>
+                <Route exact path="/" component={PageHome} />
+                <Route path="/movie/:id" component={SingleMovie} />
+              </Switch>
+         */}
 
 
 
             </Routes>
           </main>
-          {/* implememnt but hide unless mobile size */}
-          {/* <Footer /> */}
         </div>
-      </BrowserRouter>
+      </Router>
 
       
     );

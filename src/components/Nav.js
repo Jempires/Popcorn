@@ -21,16 +21,16 @@ const Nav = () => {
         
 
               <li>
-                <NavLink to="/home" activeClassName="active" className="nav-link">Home</NavLink>
+                <NavLink to="/home" className="nav-link">Home</NavLink>
               </li>
 
               <li>
-                <NavLink to="/about" activeClassName="active" className="nav-link"><button type="submit"><img className="" src={abouticon}  style={{ width: '80px', height: '85px', border:'1px solid black' }} alt=''/></button>
+                <NavLink to="/about" className="nav-link"><button type="submit"><img className="" src={abouticon}  style={{ width: '80px', height: '85px', border:'1px solid black' }} alt=''/></button>
                 </NavLink>
               </li>
 
               <li>
-                <NavLink to="/favs" activeClassName="active" className="nav-link"> <img className="" src={heart}  style={{ width: '80px', height: '85px', border:'1px solid black' }} alt=''/></NavLink>
+                <NavLink to="/favs" className="nav-link"> <img className="" src={heart}  style={{ width: '80px', height: '85px', border:'1px solid black' }} alt=''/></NavLink>
               </li>  
          
       

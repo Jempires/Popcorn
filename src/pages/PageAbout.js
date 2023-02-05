@@ -1,6 +1,6 @@
 import React from "react";
 //styling for home page
-import '../styles/About.css';
+import '../styles/App.css';
 import moviechairhome  from '../components/images/moviechairhome.jpg';
 import heart from '../components/images/heart.png';
 
