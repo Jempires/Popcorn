@@ -32,10 +32,23 @@ export const favSlice = createSlice({
     name: 'favorites',
     initialState,
     reducers: {
-        addToFavorites: (state, action) =>
-    }
+        addToFavorites: (state, action) => {
+            const newFavoritesItem = [...state.items, action.payload];
+            localStorage.setItemValue(localAppStorage, JSON.stringify(newFavoritesItem));
+            state.items = newFavoritesItem;
+        },
+        deleteFromFavorites: (state, action) => {
+            const storedItems = state.items;
+            storedItems.splice(retrieveIndex(action.payload, state.items), 1);
+            localStorage.setItemValue(localAppStorage, JSON.stringify(storedItems));
+            state.items = storedItems;
+        }
+    },
+}
+);
 
-});
+export const { addToFavorites, deleteFromFavorites } = favSlice.actions
+export default favSlice.reducer;
 
 
 
