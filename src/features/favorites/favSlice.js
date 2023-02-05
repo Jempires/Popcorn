@@ -6,7 +6,6 @@ function getFavoritesList() {
 
     // Store data retrieved from local storage in variable
     let favoritesList = localStorage.getItem(localAppStorage);
-
     // Checking for favorited movies if any
     if(favoritesList === null) {
         // if not favorites, set list to empty array 
@@ -21,10 +20,22 @@ function getFavoritesList() {
 // Setting initial state for retrieiving stored favorites list
 const initialState = {
     favItems: getFavoritesList()
+};
+
+// Check if a movie is already in the favorites list 
+function retrieveIndex(favItem, array){
+    return array.findIndex(arrayItem => arrayItem.id === favItem.id);
 }
 
-
 // Reducer to manage the state (e.g., add, remove, update)
+export const favSlice = createSlice({
+    name: 'favorites',
+    initialState,
+    reducers: {
+        addToFavorites: (state, action) =>
+    }
+
+});
 
 
 
