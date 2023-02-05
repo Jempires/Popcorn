@@ -2,15 +2,24 @@ import React, { useState, useEffect } from 'react';
 import {endPointTopRatedMovies, IMG_URL } from "../globals/globals";
 import userRatingIcon from '../components/images/userRatingIcon.jpg';
 import { Link } from 'react-router-dom';
-// import AppRouter from "../routers/AppRouter";
-const TopRatedMovies = () => {
+// import { useParams } from 'react-router-dom'
+import { BASE_URL, API_KEY } from '../globals/globals';
 
-  // const movieList = useHistory();
-  // const handleClick = (id) => {
-  //   history.push('/movies/${id}/details')
-  // }
 
+
+function TopRatedMovies() {
   const [movies, setMovies] = useState([]);
+  const [movie, setMovie] = useState({});
+  const [movieInfo, setMovieInfo] = useState({});
+  // let {id} = useParams();
+  
+  const handleClick = async (id) => {
+   
+      const fetchedResult = await fetch(`${BASE_URL}/${movie.id}?api_key=${API_KEY}`);
+      let movie = await fetchedResult.json();
+      setMovieInfo(movie);
+      // history.push(`/movie/${id}`, { movie: data });
+    };
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -33,10 +42,21 @@ const TopRatedMovies = () => {
 };
 
 const MovieCardTopRated = ({ movie }) => {
+
+
+    console.log(this.state.data)
   return (
     <div>
-     
-      
+        <div>
+          <Link to={{
+            pathname:`/moreInfo/${movie.id}/details`,
+          state:{movie}
+          }}>
+            <button variant='primary' className='more-info'>View More</button> 
+          </Link> 
+        </div>
+
+
         <img className="user-icon"  src={userRatingIcon} alt=''/>
      
         <div className='movie-card'>
@@ -50,6 +70,8 @@ const MovieCardTopRated = ({ movie }) => {
           </section>
         </div>
 
+
+     
       
     </div>
   );
