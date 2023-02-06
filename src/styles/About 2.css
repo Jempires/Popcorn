@@ -1,0 +1,40 @@
+
+body{
+    /* background-color: black; */
+    /* max-width: 1900px; */
+    /* justify-content: center; */
+    background-image: url('../components/images/popcornbgLrg.jpg');
+}
+
+header{
+    background-color: black;
+    margin-bottom:3cm;
+}
+
+p {
+    
+    background-color: black;
+    max-height: 700px;
+    font-size: 2rem;
+    color:#ffcc66;
+    padding:60px 100px 20px 100px;
+    /* max-width:1600px */
+}
+
+.moviechair img{
+    
+    height: 200px;
+    /* width:200px; */
+    position: relative; 
+    top: -55px; 
+    left:1100px;
+    /* float:right;   */
+    /* padding: 10px 160px 0px 0px; */
+ 
+     /* padding: 25px 50px 75px 100px;
+top padding is 25px
+right padding is 50px
+bottom padding is 75px
+left padding is 100px
+     */
+}
