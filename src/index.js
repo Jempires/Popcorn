@@ -5,6 +5,8 @@ import './index.css';
 import AppRouter from './routers/AppRouter';
 import reportWebVitals from './reportWebVitals';
 import "./styles/App.css";
+import { store } from 'react-redux';
+import { Provider } from 'react-redux';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
