@@ -1,4 +1,4 @@
-import heartIcon from './images/heart.png';
+import heart from './images/heart.png';
 import { useSelector, useDispatch } from 'react-redux';
 import { addToFavorites, deleteFromFavorites } from '../features/favorites/favSlice';
 
@@ -32,9 +32,9 @@ const FavButton = ({favs, singleMovie }) => {
         {favArray.findIndex(arrayObject => arrayObject.id === singleMovie.id) > -1 ? 
 
         // delete fav
-        <img src={heartIcon} alt='heart icon' className="delFav" onClick={(e) => handleClick(e, 'delete')} /> :
+        <img src={heart} alt='heart icon' className="delFav" onClick={(e) => handleClick(e, 'delete')} /> :
         // // Add favorite
-        <img src={heartIcon} alt='heart icon' className="addFav" onClick={(e) => handleClick(e, 'add')} /> 
+        <img src={heart} alt='heart icon' className="addFav" onClick={(e) => handleClick(e, 'add')} /> 
         }
         
         </>
