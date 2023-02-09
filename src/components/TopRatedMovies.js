@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import {endPointTopRatedMovies, IMG_URL } from "../globals/globals";
 import userRatingIcon from '../components/images/userRatingIcon.jpg';
 import { Link } from 'react-router-dom';
+import heart from './images/heart.png';
+import FavButton from './FavButton';
 // import { useParams } from 'react-router-dom'
 // import { BASE_URL, API_KEY } from '../globals/globals';
-import PageMoreInfo from '../pages/PageMoreInfo';
-import { BASE_URL, API_KEY } from '../globals/globals';
-import FavButton from './FavButton';
+// import PageMoreInfo from '../pages/PageMoreInfo';
+// import { BASE_URL, API_KEY } from '../globals/globals';
+// import FavButton from './FavButton';
 
 
 
@@ -92,10 +94,9 @@ const MovieCardTopRated = ({ movie }) => {
           state:{movie}
           }}>
             <button variant='primary' className='more-info' >View More</button> 
+            <FavButton/> 
           </Link> 
         </div>
-
-     
       
     </div>
     </>

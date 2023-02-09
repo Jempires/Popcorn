@@ -1,4 +1,4 @@
-import heartIcon from './images/heart.png';
+import heart from './images/heart.png';
 import { useSelector, useDispatch } from 'react-redux';
 import { addToFavorites, deleteFromFavorites } from '../features/favorites/favSlice';
 

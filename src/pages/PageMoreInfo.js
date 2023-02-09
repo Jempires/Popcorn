@@ -1,5 +1,70 @@
 // //PageMoreInfo.js
 
+import React from 'react';
+import { useState, useEffect } from 'react';
+import { BASE_URL, API_KEY, IMG_PATH} from '../globals/globals';
+
+const PageMoreInfo = () => {
+  const [movie, setMovie] = useState({});
+  const [id, setId] = useState('');
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await fetch(`${BASE_URL}${id}?${API_KEY}`);
+      const data = await result.json();
+      setMovie(data);
+    };
+    fetchData();
+  }, [id])
+  
+  return (
+    <div>
+        <h1>{movie.title}</h1>
+        <p>{movie.overview}</p>
+    </div>
+  );
+}
+
+export default PageMoreInfo;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // import React from 'react';
 
 // // import { useState, useEffect } from 'react';
@@ -17,30 +82,32 @@
 //     )
 // }
    
-// export default SingleMovie;
+// // export default SingleMovie;
 
 // import { useState, useEffect } from 'react';
-// import { useParams } from 'react-router-dom';
+// // import { useParams } from 'react-router-dom';
 // import { BASE_URL, API_KEY, IMG_PATH} from '../globals/globals';
 // // import PageHome from "../pages/PageHome";
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await fetch(`${BASE_URL}${id}?${API_KEY}`);
-      const data = await result.json();
-      setMovie(data);
-    };
-    fetchData();
-  }, [id]);
-  return (
-    <div>
-        <h1>{movie.title}</h1>
-        <p>{movie.overview}</p>
-    </div>
-  );
-};
-
+//   useEffect(() => {
+//     const fetchData = async () => {
+//       const result = await fetch(`${BASE_URL}${id}?${API_KEY}`);
+//       const data = await result.json();
+//       setMovie(data);
+//     };
+//     fetchData();
+//   }, [id])
   
+//   return (
+//     <div>
+//         <h1>{movie.title}</h1>
+//         <p>{movie.overview}</p>
+//     </div>
+//   );
+// }
+
+
+// export default PageMoreInfo;   
   //     setId(movie.id);
   // }, [movie.id]);
 
@@ -53,7 +120,6 @@
 //   );
 // };
 
-export default PageMoreInfo; 
 
     // const fetchMovie = async () => {
 //     const response = await fetch(`
@@ -65,8 +131,8 @@ export default PageMoreInfo;
 // fetchMovie();
 // }, []);
 
-/* <div>
-<img className="user-icon" src={userRatingIcon} alt="" />
+// <div>
+{/* <img className="user-icon" src={userRatingIcon} alt="" />
 <div className="movie-card">
     <img
       src={`${IMG_URL}/original/${movie.poster_path}`}
@@ -74,7 +140,7 @@ export default PageMoreInfo;
     />
 
 // // // fetching movie details
-// // useEffect(() => {
+// // useEffect(() => { */}
 // //     const fetchMovie = async() => {
 // //         const fetchedResult = await fetch(`${BASE_URL}/${id}?api_key=${API_KEY}`);
 // //         let data = await fetchedResult.json();
