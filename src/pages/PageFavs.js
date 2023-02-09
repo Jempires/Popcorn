@@ -5,8 +5,7 @@
 
 // const PageFavs () => {
 
-//     // const [favorites, setFavorites] = useSelector
-
+//     const [favorites, setFavorites] = useSelector
 
 // };
 

@@ -1,11 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { localAppStorage } from '../../globals/globals';
+import { FAVORITES_STORAGE } from '../../globals/globals';
 
 // Retrieving favorited movies from local storage
 function getFavoritesList() {
 
     // Store data retrieved from local storage in variable
-    let favoritesList = localStorage.getItem(localAppStorage);
+    let favoritesList = localStorage.getItem(FAVORITES_STORAGE);
     // Checking for favorited movies if any
     if(favoritesList === null) {
         // if not favorites, set list to empty array 
@@ -34,13 +34,15 @@ export const favSlice = createSlice({
     reducers: {
         addToFavorites: (state, action) => {
             const newFavoritesItem = [...state.items, action.payload];
-            localStorage.setItemValue(localAppStorage, JSON.stringify(newFavoritesItem));
+            localStorage.setItemValue(FAVORITES_STORAGE, JSON.stringify(newFavoritesItem));
             state.items = newFavoritesItem;
         },
         deleteFromFavorites: (state, action) => {
-            const storedItems = state.items;
+            // Makes copy of array instead of directly deleting:
+            const storedItems = [...state.items];
             storedItems.splice(retrieveIndex(action.payload, state.items), 1);
-            localStorage.setItemValue(localAppStorage, JSON.stringify(storedItems));
+            localStorage.setItemValue(FAVORITES_STORAGE, JSON.stringify(storedItems));
+            // make a copy and stores in array
             state.items = storedItems;
         }
     },
