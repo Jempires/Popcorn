@@ -3,7 +3,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/App.css";
 import heart from '../components/images/heart.png';
-import abouticon from '../components/images/abouticon.jpg';
+// import abouticon from '../components/images/abouticon.jpg';
 
 
 const Nav = () => {
