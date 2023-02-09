@@ -10,8 +10,8 @@ import PageMoreInfo from '../pages/PageMoreInfo';
 
 function TopRatedMovies() {
   const [movies, setMovies] = useState([]);
-  const [selectedMovie, setSelectedMovie] = useState({});
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  //  const [selectedMovie, setSelectedMovie] = useState({});
+  // const [isModalOpen, setIsModalOpen] = useState(false);
  
   // // let {id} = useParams();
   
@@ -36,20 +36,20 @@ function TopRatedMovies() {
   }, []);
 
 
-  const handleClick = movie => {
-    setSelectedMovie(movie);
-    setIsModalOpen(true);
-  };
+  // const handleClick = movie => {
+  //   setSelectedMovie(movie);
+  //   // setIsModalOpen(true);
+  // };
 
 
   return (
       <div className='movies-container'>
         {movies.map((movie) => (
-            <MovieCardTopRated onClick={()=> handleClick(movie)} key={movie.id} movie={movie}/>
+            <MovieCardTopRated onClick={()=>(movie)} key={movie.id} movie={movie}/>
         ))}
-           {isModalOpen && (
+           {/* {isModalOpen && (
         <PageMoreInfo movie={selectedMovie} onClose={() => setIsModalOpen(false)} />
-      )}
+      )} */}
     </div>
   );
 };

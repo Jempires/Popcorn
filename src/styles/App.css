@@ -183,3 +183,52 @@ p .about {
   color:black;
   font-weight: bolder;
 }
+
+.about{
+  color:antiquewhite;
+  background-color: black;
+  padding: 30px;
+  font-size: 1.75rem;
+
+}
+
+.tmdb {
+  height:20px;
+  width:600px;
+  opacity: 50%;
+  position: relative;
+  left:-260px;
+  
+}
+
+.logo-about{
+  height:100px;
+  width:auto;
+  position: relative;
+  left:650px;
+  top:-70px;
+}
+
+p .aboutLogo {
+  font-size: 3rem;
+  position: relative;
+  top:20px;
+  left:300px;
+
+}
+
+.about-secondary {
+  color:#01b4e4;
+  position: relative;
+  top:40px;
+  left:440px;
+  font-size: 1rem;
+}
+
+.about-body {
+  max-width: 75vw;
+  position: relative;
+  left:250px;
+  top:100px;
+
+}
