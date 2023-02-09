@@ -3,25 +3,26 @@ import {endPointTopRatedMovies, IMG_URL } from "../globals/globals";
 import userRatingIcon from '../components/images/userRatingIcon.jpg';
 import { Link } from 'react-router-dom';
 // import { useParams } from 'react-router-dom'
-import { BASE_URL, API_KEY } from '../globals/globals';
+// import { BASE_URL, API_KEY } from '../globals/globals';
+import PageMoreInfo from '../pages/PageMoreInfo';
 
 
 
 function TopRatedMovies() {
   const [movies, setMovies] = useState([]);
-   const [movie, setMovie] = useState({});
-  const [movieInfo, setMovieInfo] = useState({});
+  const [selectedMovie, setSelectedMovie] = useState({});
+  const [isModalOpen, setIsModalOpen] = useState(false);
  
-  // let {id} = useParams();
+  // // let {id} = useParams();
   
-  const handleClick = async (id) => {
+  // const handleClick = async (id) => {
     
-    const fetchedResult = await fetch(`${BASE_URL}/${movie.id}?api_key=${API_KEY}`);
+  //   const fetchedResult = await fetch(`${BASE_URL}/${movie.id}?api_key=${API_KEY}`);
       
-      setMovieInfo(movieInfo);
-      let movie = await fetchedResult.json();
-      // history.push(`/movie/${id}`, { movie: data });
-    };
+  //     setMovieInfo(movieInfo);
+  //     let movie = await fetchedResult.json();
+  //     // history.push(`/movie/${id}`, { movie: data });
+  //   };
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -34,12 +35,22 @@ function TopRatedMovies() {
     fetchMovies();
   }, []);
 
+
+  const handleClick = movie => {
+    setSelectedMovie(movie);
+    setIsModalOpen(true);
+  };
+
+
   return (
       <div className='movies-container'>
         {movies.map((movie) => (
-            <MovieCardTopRated key={movie.id} movie={movie}/>
+            <MovieCardTopRated onClick={()=> handleClick(movie)} key={movie.id} movie={movie}/>
         ))}
-      </div>
+           {isModalOpen && (
+        <PageMoreInfo movie={selectedMovie} onClose={() => setIsModalOpen(false)} />
+      )}
+    </div>
   );
 };
 

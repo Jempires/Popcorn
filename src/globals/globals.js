@@ -22,7 +22,7 @@ export const IMG_URL = 'https://image.tmdb.org/t/p/';
 export const localStorage = 'favorites';
 
 // Get Movie detail
-// `${BASE_URL}${movie_id}?${API_KEY}&language=en-US`;
+// export const movieDetails =`${BASE_URL}${movie_id}?${API_KEY}`;
 
 // get release dates:
 // `${BASE_URL}{movie_id}/release_dates?${API_KEY}`;
