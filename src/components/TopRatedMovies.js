@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {endPointTopRatedMovies, IMG_URL } from "../globals/globals";
 import userRatingIcon from '../components/images/userRatingIcon.jpg';
 import { Link } from 'react-router-dom';
-import heart from './images/heart.png';
+import heartIcon from './images/heart.png';
 import FavButton from './FavButton';
 // import { useParams } from 'react-router-dom'
 // import { BASE_URL, API_KEY } from '../globals/globals';
