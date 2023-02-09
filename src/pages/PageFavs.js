@@ -3,6 +3,7 @@
 import { useSelector } from 'react-redux'; 
 import MovieCard from '../components/MovieCard';
 // import { useState } from 'react';
+import heart from '../components/images/heart.png';
 
 function PageFavs () {
 
@@ -15,7 +16,7 @@ function PageFavs () {
             <div className="error-msg">
                 <p className='favs-error'>Sorry! There are currently no movies on your favorites list.
 
-                You may browse through movies on the home page and add movies to your list.</p>
+                You may browse through movies on the home page and click the <img  src={heart} alt=''/> to add movies to your list.</p>
             </div> : 
                 <div id='movie-card'>
                     {favorites.map((movie)=> {
