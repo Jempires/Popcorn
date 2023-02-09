@@ -35,8 +35,8 @@ function PageHome() {
         
             <Tabs selectedIndex={selectedTab} onSelect={setSelectedTab}>
                 <TabList>
-                    <Tab className={'submenu'}>Top Rated</Tab>
                     <Tab className={'submenu'}>Popular</Tab>
+                    <Tab className={'submenu'}>Top Rated</Tab>
                     <Tab className={'submenu'}>Now Playing</Tab>
                     <Tab className={'submenu'}>Upcoming</Tab>
                 </TabList>
