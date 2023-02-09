@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {endPointUpcomingMovies, IMG_URL } from "../globals/globals";
+import userRatingIcon from '../components/images/userRatingIcon.jpg';
 
 
 const UpcomingMovies = () => {
@@ -28,18 +29,25 @@ const UpcomingMovies = () => {
 
 const MovieCardUpcoming = ({ movie }) => {
   return (
+
+    <div>
+    <div>
+    {/* <p className="score">Score</p> */}
+    <img className="user-icon"  src={userRatingIcon} alt=''/>
+  </div>
       <div className='movie-card'>
         <img  src={`${IMG_URL}/original/${movie.poster_path}`}
                         alt={movie.title} />
 
-         {/* <h3  className="hover">{movie.title}</h3>
-        <p className="hover">Rating: {movie.vote_average}</p> 
-         <p className="hover">descriphfg,j.: {movie.description}</p> 
-         button for more info page */}
- {/* <img  src={`https://image.tmdb.org/t/p/w400/${movie.poster_path}`} */}
-                        {/* alt={movie.title} /> */}
+      <p className="userscore"> {movie.vote_average}</p>
         
-      </div>
+        <section className='movie-description'>
+        <p className="description"> {movie.overview}</p> 
+        </section>
+      
+    </div>
+</div>
+
   );
 };
 

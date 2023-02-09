@@ -1,0 +1,32 @@
+/* .item1 { grid-area: header; }
+.item1-1 {grid-area: title;}
+.item2 { grid-area: toprated; }
+.item1-2 {grid-area: title1;}
+.item3 { grid-area: popular; }
+.item1-3 {grid-area: title2;}
+.item4 { grid-area: playing; }
+.item1-4 {grid-area: title;}
+.item5 { grid-area: upcoming; }
+.item1-5 {grid-area: title;}
+.item6 { grid-area: footer; }
+
+
+.grid-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  grid-template-areas:
+    'header'
+    'title'
+    'toprated'
+    'title1' 
+    'popular'
+    'title2'
+    'playing'
+    'title3'
+    'upcoming ' 
+    'footer';
+ 
+  padding:200px;
+} */

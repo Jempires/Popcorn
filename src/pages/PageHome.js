@@ -1,54 +1,72 @@
-//styling for home page
-import '../styles/Home.css';
+//PageHome.js
 
-import React from 'react';
+
+
+//styling for home page
+import '../styles/App.css';
+// import {NavLink } from "react-router-dom";
+import React, {useState} from 'react';
 import TopRatedMovies from '../components/TopRatedMovies';
 import PopularMovies from '../components/PopularMovies';
 import NowPlayingMovies from '../components/NowPlayingMovies';
 import UpcomingMovies from '../components/UpcomingMovies';
-
+// import SubNav  from '../components/SubNav';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+// import { Link } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
+// import {BASE_URL, API_KEY} from "../globals/globals";
+// import SingleMovie from "../pages/PageMoreInfo";
+// import { useParams } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 
 function Home() {
+    
+    const {selectedTab, setSelectedTab} = useState(0);
+
+  
+    
+
   return (
+  
     <div>
-      <div className="grid-container">
-        {/* <body className="home-page"> */}
+       
    
+        
+            <Tabs selectedIndex={selectedTab} onSelect={setSelectedTab}>
+                <TabList>
+                    <Tab className={'submenu'}>Top Rated</Tab>
+                    <Tab className={'submenu'}>Popular</Tab>
+                    <Tab className={'submenu'}>Now Playing</Tab>
+                    <Tab className={'submenu'}>Upcoming</Tab>
+                </TabList>
 
-                <div className="item2">
+                <TabPanel>
                     <h2>Top Rated</h2>
-                    <br></br>
-                  <TopRatedMovies /> 
-                </div>
-                   
-                <div className="item3" >
-                    <h2 className='h2tester'>Popular</h2>
-                 
-                    <br></br>
+                    <TopRatedMovies/>
+                </TabPanel>
+
+                <TabPanel>
+                    <h2>Popular</h2>
                     <PopularMovies/>
-                </div>
+                </TabPanel>
 
-          
-                <div className="item4">
+                <TabPanel>
                     <h2>Now Playing</h2>
-                    <br></br>
-                    <NowPlayingMovies/> 
-                </div>
+                    <NowPlayingMovies/>
+                </TabPanel>
 
-          
-            
-                <div className="item5">
+                <TabPanel>
                     <h2>Upcoming</h2>
-                    <br></br>
                     <UpcomingMovies/>
-                   
-                </div>
+                </TabPanel>
 
-            
 
-        {/* </body> */}
-      </div>
+            </Tabs>
+         
+              
+
+  
     </div>
   );
 }

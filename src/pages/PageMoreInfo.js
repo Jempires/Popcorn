@@ -1,5 +1,24 @@
 //PageMoreInfo.js
 
+import React from 'react';
+
+// import { useState, useEffect } from 'react';
+// import { useParams } from 'react-router-dom';
+// import { BASE_URL, API_KEY,} from '../globals/globals';
+// import PageHome from "../pages/PageHome";
+
+const SingleMovie = (props) => {
+    const movie = props.location.state.movie;
+    return (
+        <div className="">
+            <h1>{movie.title}</h1>
+            <p>{movie.overview}</p>
+        </div>
+    )
+}
+   
+export default SingleMovie;
+
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { BASE_URL, API_KEY, IMG_PATH} from '../globals/globals';
@@ -12,33 +31,27 @@ const SingleMovie = () => {
     let {id} = useParams();
     id = id * 1; 
 
-    const endPointPoster = `${IMG_PATH}`;
 
-    // fetching movie details
-    useEffect(() => {
-        const fetchMovie = async() => {
-            const fetchedResult = await fetch(`${BASE_URL}${id}?${API_KEY}`);
-            // console.log(fetchedResult);
-            let data = await fetchedResult.json();
-            // console.log(data);
-            setMovieInfo(data);
-        };
-        fetchMovie();
-    },[id]);
+// const [movie, setMovie] = useState({});
+   
+// let {id} =useParams();
 
-    return(
-        <div key={id}>
-            <>{movie.poster_path ? (
-                <img src={`${IMG_PATH}`} alt="" />
-                '<h1></h1>'
+// // fetching movie details
+// useEffect(() => {
+//     const fetchMovie = async() => {
+//         const fetchedResult = await fetch(`${BASE_URL}/${id}?api_key=${API_KEY}`);
+//         let data = await fetchedResult.json();
+//         setMovie(data);
+//     };
+//     fetchMovie();
+// },[id]);
 
-        </div>
 
-        // <div>
-        //     { movieInfo.title ? <h1>{movieInfo.title}</h1> : null }
-        //     { movieInfo.overview ? <p>{movieInfo.overview}</p> : null }
-        // </div>
-    )
+// return(
+//     <div>
+//         <h1>{movie.title}</h1>
+//         <p>{movie.overview}</p>
+//     </div>
+// )
 
-}
-export default SingleMovie;
+// }
