@@ -20,7 +20,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 // import { Link } from 'react-router-dom';
 
 
-function Home() {
+function PageHome() {
     
     const {selectedTab, setSelectedTab} = useState(0);
 
@@ -72,5 +72,5 @@ function Home() {
 }
 
 
-export default Home;
+export default PageHome;
 
