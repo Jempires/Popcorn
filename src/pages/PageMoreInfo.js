@@ -1,18 +1,28 @@
-//PageMoreInfo.js
+// //PageMoreInfo.js
 
-import React, { useEffect } from 'react';
- import { useState} from 'react';
- import { useParams } from 'react-router-dom';
- import { BASE_URL, API_KEY,} from '../globals/globals';
-//  import  from "../globals/globals"
-// import {endPointTopRatedMovies} from "../globals/globals";
-// import userRatingIcon from '../components/images/userRatingIcon.jpg';
-import { IMG_URL } from "../globals/globals";
+// import React from 'react';
 
-const PageMoreInfo = () => {
-  const [movie, setMovie] = useState({});
-  const [id] = useParams();
- 
+// // import { useState, useEffect } from 'react';
+// // import { useParams } from 'react-router-dom';
+// // import { BASE_URL, API_KEY,} from '../globals/globals';
+// // import PageHome from "../pages/PageHome";
+
+// const PageMoreInfo = (props) => {
+//     const movie = props.location.state.movie;
+//     return (
+//         <div className="">
+//             <h1>{movie.title}</h1>
+//             <p>{movie.overview}</p>
+//         </div>
+//     )
+// }
+   
+// export default SingleMovie;
+
+// import { useState, useEffect } from 'react';
+// import { useParams } from 'react-router-dom';
+// import { BASE_URL, API_KEY, IMG_PATH} from '../globals/globals';
+// // import PageHome from "../pages/PageHome";
 
   useEffect(() => {
     const fetchData = async () => {
@@ -63,10 +73,20 @@ export default PageMoreInfo;
       alt={movie.title}
     />
 
-    <p className="userscore">{movie.vote_average}</p>
+// // // fetching movie details
+// // useEffect(() => {
+// //     const fetchMovie = async() => {
+// //         const fetchedResult = await fetch(`${BASE_URL}/${id}?api_key=${API_KEY}`);
+// //         let data = await fetchedResult.json();
+// //         setMovie(data);
+// //     };
+// //     fetchMovie();
+// // },[id]);
 
-    <section className="movie-description">
-      <p className="description">{movie.overview}</p>
-    </section>
-  </div>
-</div> */
+
+// return(
+//     <div>
+//         <h1>{movie.title}</h1>
+//         <p>{movie.overview}</p>
+//     </div>
+// )
