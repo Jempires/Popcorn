@@ -25,8 +25,7 @@ const Nav = () => {
               </li>
 
               <li>
-                <NavLink to="/about" className="nav-link"><button type="submit"><img className="" src={abouticon}  style={{ width: '80px', height: '85px', border:'1px solid black' }} alt=''/></button>
-                </NavLink>
+                <NavLink to="/about" className="nav-link">About</NavLink>
               </li>
 
               <li>
