@@ -42,13 +42,13 @@ function PageHome() {
                 </TabList>
 
                 <TabPanel>
-                    <h2>Top Rated</h2>
-                    <TopRatedMovies/>
+                    <h2>Popular</h2>
+                    <PopularMovies/>
                 </TabPanel>
 
                 <TabPanel>
-                    <h2>Popular</h2>
-                    <PopularMovies/>
+                    <h2>Top Rated</h2>
+                    <TopRatedMovies/>
                 </TabPanel>
 
                 <TabPanel>
