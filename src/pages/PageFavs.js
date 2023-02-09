@@ -1,19 +1,33 @@
-import React from "react";
-//import admitOne from '../components/images/admitOne.jpg';
-//import { Link } from "react-router-dom";
+// Imports
+// import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux'; 
+import MovieCard from '../components/MovieCard';
+// import { useState } from 'react';
+import heart from '../components/images/heart.png';
 
-//import Nav from '../components/Nav'
+function PageFavs () {
 
-
-function Landing({title}) {
-
+    const favorites = useSelector((state) => state.favorites.favItems);
+    
     return (
-        <main className="landing-page">
-            <h1>{title}</h1>
-           
-         
-        </main>
-    );
-}
+        <section className="page-favs">
+            <h2 className='favs-title'>Favorites Movies</h2>
+            {favorites.length < 1 ? 
+            <div className="error-msg">
+                <p className='favs-error'>Sorry! There are currently no movies on your favorites list.
 
-export default Landing;
+                You may browse through movies on the home page and click the <img  src={heart} alt=''/> to add movies to your list.</p>
+            </div> : 
+                <div id='movie-card'>
+                    {favorites.map((movie)=> {
+                        return <MovieCard key={movie.id} movie={movie} />
+                    }
+                    )}
+                </div>
+            };
+
+        </section>
+    );
+};
+
+export default PageFavs;
