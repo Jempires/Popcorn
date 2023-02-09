@@ -4,12 +4,12 @@ import userRatingIcon from '../components/images/userRatingIcon.jpg';
 import { Link } from 'react-router-dom';
 // import { useParams } from 'react-router-dom'
 import { BASE_URL, API_KEY } from '../globals/globals';
+import FavButton from './FavButton';
 
 
 
 function TopRatedMovies() {
   const [movies, setMovies] = useState([]);
-   const [movie, setMovie] = useState({});
   const [movieInfo, setMovieInfo] = useState({});
  
   // let {id} = useParams();
@@ -36,7 +36,9 @@ function TopRatedMovies() {
 
   return (
       <div className='movies-container'>
+        {/*  */}
         {movies.map((movie) => (
+          // replace everything with just the movie card component
             <MovieCardTopRated key={movie.id} movie={movie}/>
         ))}
       </div>
@@ -45,9 +47,10 @@ function TopRatedMovies() {
 
 const MovieCardTopRated = ({ movie }) => {
 
-
   return (
+    <>
     <div>
+    <FavButton singleMovie={movie}/>
         <div>
           <Link to={{
             pathname:`/moreInfo/${movie.id}/details`,
@@ -58,6 +61,7 @@ const MovieCardTopRated = ({ movie }) => {
         </div>
         {/* onClick={handleClick} */}
 
+          
         <img className="user-icon"  src={userRatingIcon} alt=''/>
      
         <div className='movie-card'>
@@ -71,10 +75,9 @@ const MovieCardTopRated = ({ movie }) => {
           </section>
         </div>
 
-
-     
-      
+  
     </div>
+    </>
   );
 };
 
