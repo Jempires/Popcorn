@@ -4,8 +4,8 @@ import { BASE_URL, API_KEY, IMG_PATH} from '../globals/globals';
 // import PageHome from "../pages/PageHome";
 
 const SingleMovie = () => {
-    const [movie, setMovie] = useState({});
-    const [moviePoster, setMoviePoster] = useState({});
+    const [movie, setMovie] = useState([]);
+    const [moviePoster, setMoviePoster] = useState([]);
     // const [movieInfo, setMovieInfo] = useState({});
    
     let {id} = useParams();
@@ -14,7 +14,7 @@ const SingleMovie = () => {
     // fetching movie details
     useEffect(() => {
         const fetchMovie = async() => {
-            const fetchedResult = await fetch(`${BASE_URL}/${id}?api_key=${API_KEY}`);
+            const fetchedResult = await fetch(`${BASE_URL}${id}?${API_KEY}`);
             let data = await fetchedResult.json();
             setMovie(data);
         };
