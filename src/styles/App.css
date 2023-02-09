@@ -237,3 +237,25 @@ p .aboutLogo {
   top:100px;
 
 }
+
+.page-favs{
+  background-color: black;
+  position: relative;
+  left:240px;
+  top:150px;
+  max-width: 75vw;
+  
+}
+
+.favs-title{
+text-decoration:underline red;
+
+}
+
+.favs-error{
+  color:antiquewhite;
+  font-size: 1.5rem;
+  padding: 20px;
+
+
+}
