@@ -59,15 +59,7 @@ const MovieCardTopRated = ({ movie }) => {
   return (
     <>
     <div>
-        <div>
-          <Link to={{
-            pathname:`/moreInfo/${movie.id}/details`,
-          state:{movie}
-          }}>
-            <button variant='primary' className='more-info' >View More</button> 
-          </Link> 
-        </div>
-        {/* onClick={handleClick} */}
+     
 
           
         <img className="user-icon"  src={userRatingIcon} alt=''/>
