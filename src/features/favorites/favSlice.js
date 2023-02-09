@@ -24,7 +24,7 @@ const initialState = {
 
 // Check if a movie is already in the favorites list 
 function retrieveIndex(favItem, array){
-    return array.findIndex(arrayItem => arrayItem.id === favItem.id);
+    return array.findIndex(arrayItem => arrayItem?.id === favItem.id);
 }
 
 // Reducer to manage the state (e.g., add, remove, update)
@@ -33,17 +33,17 @@ export const favSlice = createSlice({
     initialState,
     reducers: {
         addToFavorites: (state, action) => {
-            const newFavoritesItem = [...state.items, action.payload];
-            localStorage.setItemValue(FAVORITES_STORAGE, JSON.stringify(newFavoritesItem));
-            state.items = newFavoritesItem;
+            const newFavoritesItem = [...state.favItems, action.payload];
+            localStorage.setItem(FAVORITES_STORAGE, JSON.stringify(newFavoritesItem));
+            state.favItems = newFavoritesItem;
         },
         deleteFromFavorites: (state, action) => {
             // Makes copy of array instead of directly deleting:
-            const storedItems = [...state.items];
-            storedItems.splice(retrieveIndex(action.payload, state.items), 1);
-            localStorage.setItemValue(FAVORITES_STORAGE, JSON.stringify(storedItems));
+            const storedItems = [...state.favItems];
+            storedItems.splice(retrieveIndex(action.payload, state.favItems), 1);
+            localStorage.setItem(FAVORITES_STORAGE, JSON.stringify(storedItems));
             // make a copy and stores in array
-            state.items = storedItems;
+            state.favItems = storedItems;
         }
     },
 }
