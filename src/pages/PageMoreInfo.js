@@ -63,10 +63,20 @@ export default PageMoreInfo;
       alt={movie.title}
     />
 
-    <p className="userscore">{movie.vote_average}</p>
+// // fetching movie details
+// useEffect(() => {
+//     const fetchMovie = async() => {
+//         const fetchedResult = await fetch(`${BASE_URL}/${id}?api_key=${API_KEY}`);
+//         let data = await fetchedResult.json();
+//         setMovie(data);
+//     };
+//     fetchMovie();
+// },[id]);
 
-    <section className="movie-description">
-      <p className="description">{movie.overview}</p>
-    </section>
-  </div>
-</div> */
+
+// return(
+//     <div>
+//         <h1>{movie.title}</h1>
+//         <p>{movie.overview}</p>
+//     </div>
+// )

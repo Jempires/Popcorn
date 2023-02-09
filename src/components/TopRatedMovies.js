@@ -3,15 +3,14 @@ import {endPointTopRatedMovies, IMG_URL } from "../globals/globals";
 import userRatingIcon from '../components/images/userRatingIcon.jpg';
 import { Link } from 'react-router-dom';
 // import { useParams } from 'react-router-dom'
-// import { BASE_URL, API_KEY } from '../globals/globals';
-import PageMoreInfo from '../pages/PageMoreInfo';
+import { BASE_URL, API_KEY } from '../globals/globals';
+import FavButton from './FavButton';
 
 
 
 function TopRatedMovies() {
   const [movies, setMovies] = useState([]);
-  //  const [selectedMovie, setSelectedMovie] = useState({});
-  // const [isModalOpen, setIsModalOpen] = useState(false);
+  const [movieInfo, setMovieInfo] = useState({});
  
   // // let {id} = useParams();
   
@@ -44,6 +43,7 @@ function TopRatedMovies() {
 
   return (
       <div className='movies-container'>
+        {/*  */}
         {movies.map((movie) => (
             <MovieCardTopRated onClick={()=>(movie)} key={movie.id} movie={movie}/>
         ))}
@@ -56,12 +56,20 @@ function TopRatedMovies() {
 
 const MovieCardTopRated = ({ movie }) => {
 
-
   return (
+    <>
     <div>
-     
+        <div>
+          <Link to={{
+            pathname:`/moreInfo/${movie.id}/details`,
+          state:{movie}
+          }}>
+            <button variant='primary' className='more-info' >View More</button> 
+          </Link> 
+        </div>
         {/* onClick={handleClick} */}
 
+          
         <img className="user-icon"  src={userRatingIcon} alt=''/>
      
         <div className='movie-card'>
@@ -86,6 +94,7 @@ const MovieCardTopRated = ({ movie }) => {
      
       
     </div>
+    </>
   );
 };
 

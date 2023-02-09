@@ -6,8 +6,6 @@ import { Link } from "react-router-dom";
 import Wrapper from "../components/Wrapper";
 
 
- 
-
 //import Nav from '../components/Nav'
 
 // testing
