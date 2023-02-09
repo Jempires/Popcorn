@@ -31,17 +31,10 @@ const FavButton = ({favs, singleMovie }) => {
         {/* ? is error checking if array is null */}
         {favArray.findIndex(arrayObject => arrayObject.id === singleMovie.id) > -1 ? 
 
-        <button className='delFav' onClick={(e) => handleClick(e, 'delete')} >
-            Remove
-        </button> :
-        <button className='addFav' onClick={(e) => handleClick(e, 'add')} >
-            Add
-        </button> 
-
         // delete fav
-        // <img src={heartIcon} alt='heart icon' className="delFav" onClick={(e) => handleClick(e, 'delete')} /> :
+        <img src={heartIcon} alt='heart icon' className="delFav" onClick={(e) => handleClick(e, 'delete')} /> :
         // // Add favorite
-        // <img src={heartIcon} alt='heart icon' className="addFav" onClick={(e) => handleClick(e, 'add')} /> 
+        <img src={heartIcon} alt='heart icon' className="addFav" onClick={(e) => handleClick(e, 'add')} /> 
         }
         
         </>
