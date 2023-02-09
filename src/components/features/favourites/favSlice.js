@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { FAVORITES_STORAGE } from '../../globals/globals';
+import { FAVORITES_STORAGE } from '../../../globals/globals';
 
 // Retrieving favorited movies from local storage
 function getFavoritesList() {
