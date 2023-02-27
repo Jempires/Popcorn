@@ -33,43 +33,6 @@ const PageMoreInfo = () => {
 export default PageMoreInfo;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // import React from 'react';
 
 // // import { useState, useEffect } from 'react';
@@ -137,8 +100,8 @@ export default PageMoreInfo;
 // }, []);
 
 // <div>
-{/* <img className="user-icon" src={userRatingIcon} alt="" />
-<div className="movie-card">
+// {/* <img className="user-icon" src={userRatingIcon} alt="" />
+/* <div className="movie-card">
     <img
       src={`${IMG_URL}/original/${movie.poster_path}`}
       alt={movie.title}
@@ -149,7 +112,7 @@ export default PageMoreInfo;
 // // let {id} =useParams();
 
 // // // fetching movie details
-// // useEffect(() => {
+// // useEffect(() => { */
 // //     const fetchMovie = async() => {
 // //         const fetchedResult = await fetch(`${BASE_URL}/${id}?api_key=${API_KEY}`);
 // //         let data = await fetchedResult.json();
@@ -157,17 +120,16 @@ export default PageMoreInfo;
 // //     };
 // //     fetchMovie();
 // // },[id]);
->>>>>>>>> Temporary merge branch 2
 
-    <p className="userscore">{movie.vote_average}</p>
 
-<<<<<<<<< Temporary merge branch 1
-    <section className="movie-description">
-      <p className="description">{movie.overview}</p>
-    </section>
-  </div>
-</div> */
-=========
+//     <p className="userscore">{movie.vote_average}</p>
+
+//     <section className="movie-description">
+//       <p className="description">{movie.overview}</p>
+//     </section>
+//   </div>
+// </div> */
+
 // // return(
 // //     <div>
 // //         <h1>{movie.title}</h1>
@@ -176,4 +138,4 @@ export default PageMoreInfo;
 // // )
 
 // // }
->>>>>>>>> Temporary merge branch 2
+
