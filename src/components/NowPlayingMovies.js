@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import {endPointNowPlayingMovies, IMG_URL } from "../globals/globals";
 import userRatingIcon from '../components/images/userRatingIcon.jpg';
 import { Link } from 'react-router-dom';
+import FavButton from './FavButton';
+import MovieCard from '../components/MovieCard';
 
 const NowPlayingMovies = () => {
   const [movies, setMovies] = useState([]);

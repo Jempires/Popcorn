@@ -18,8 +18,9 @@ export const SEARCH_URL = `https://api.themoviedb.org/3/search/movie/`;
 
 // Images 
 export const IMG_URL = 'https://image.tmdb.org/t/p/';
+export const IMG_PATH = 'https://image.tmdb.org/t/p/original';
 
-export const localStorage = 'favorites';
+export const FAVORITES_STORAGE = 'favorites';
 
 // Get Movie detail
 // export const movieDetails =`${BASE_URL}${movie_id}?${API_KEY}`;

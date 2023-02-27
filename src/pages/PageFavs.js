@@ -4,8 +4,15 @@
 // import MovieCard from '../components/MovieCard';
 // // import { useState } from 'react';
 // import heart from '../components/images/heart.png';
+// Imports
+// import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux'; 
+import MovieCard from '../components/MovieCard';
+// import { useState } from 'react';
+import heart from '../components/images/heart.png';
 
 // function PageFavs () {
+function PageFavs () {
 
 //     const favorites = useSelector((state) => state.favorites.favItems);
     
