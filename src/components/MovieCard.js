@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { IMG_URL } from "../globals/globals";
 import userRatingIcon from '../components/images/userRatingIcon.jpg';
 import { Link } from 'react-router-dom';
@@ -8,42 +8,40 @@ import { useDispatch } from 'react-redux';
 import PageFavs from '../pages/PageFavs';
 
 function MovieCard({movie, isFav}) {
-    const dispatch = useDispatch();
 
-    function handleFavClick(addFav, movie) {
-        if(addFav === true) {
-            dispatch(addToFavorites(movie));
-        }else{
-            dispatch(deleteFromFavorites(movie));
-        }
+  const dispatch = useDispatch();
+
+  function handleFavClick(addFav, movie) {
+
+    if(addFav === true) {
+      dispatch(addToFavorites(movie));
+    }else{
+      dispatch(deleteFromFavorites(movie));
     }
-    return (
-        <>
-        <div>
-        {/* <FavButton singleMovie={movie}/> */}
-            <div>
-              <Link to={{
-                pathname:`/moreInfo/${movie.id}/details`,
-              state:{movie}
-              }}>
-                <button variant='primary' className='more-info' >View More</button> 
-              </Link> 
-            </div>
-            {/* onClick={handleClick} */}
-              
-            <img className="user-icon"  src={userRatingIcon} alt=''/>
+  }
   
-            <div className='movie-card'>
-              <img  src={`${IMG_URL}/original/${movie.poster_path}`}
-                    alt={movie.title} />
-                <p className="userscore"> {movie.vote_average}</p>
-                <FavButton singleMovie={movie}/>    
-              <section className='movie-description'>
-                <p className="description"> {movie.overview}</p>
-              </section>
-            </div>
+  return (
+    <>
+    <div className="movie-card">
+      <div className="movie-card-content">
+        
+        <FavButton singleMovie={movie}/>
+        <img src={`${IMG_URL}/original/${movie.poster_path}`} alt={`Movie Poster for ${movie.title}`} />
+        <p className="userscore"> {movie.vote_average}</p>
+        {/* <FavButton singleMovie={movie}/> */}
+
+        <div className="hover-overlay">
+          <p className="release-date">Release Date: <br></br> {movie.release_date} </p>
+          <p className="description" id="movie-description">{movie.overview}</p>
+
+          <Link to={{ pathname:`/moreInfo/${movie.id}/details`, state:{movie} }}>
+            <button variant='primary' className='more-info'>More Info</button> 
+          </Link> 
         </div>
-        </>
-      );
+
+      </div>    
+    </div>
+    </>   
+  );
 }
   export default MovieCard;

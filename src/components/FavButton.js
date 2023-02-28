@@ -1,3 +1,4 @@
+import React from 'react';
 import heartIcon from './images/heart.png';
 import { useSelector, useDispatch } from 'react-redux';
 import { addToFavorites, deleteFromFavorites } from '../features/favorites/favSlice';
@@ -21,9 +22,10 @@ const FavButton = ({favs, singleMovie }) => {
         }
     };
     if (favArray.length === 0 || singleMovie === undefined)  {
-        return 'hello';
+        return false;
     }
-    console.log(singleMovie)
+    console.log(singleMovie);
+
     return(
         // Empty div, helps with styling so you're not limited to the divs. helps contain return 
         <>
