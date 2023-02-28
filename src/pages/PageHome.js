@@ -21,56 +21,44 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 
 function PageHome() {
-    
     const {selectedTab, setSelectedTab} = useState(0);
-
-  
-    
 
   return (
   
     <div>
-       
-   
-        
-            <Tabs selectedIndex={selectedTab} onSelect={setSelectedTab}>
-                <TabList>
-                    <Tab className={'submenu'}>Top Rated</Tab>
-                    <Tab className={'submenu'}>Popular</Tab>
-                    <Tab className={'submenu'}>Now Playing</Tab>
-                    <Tab className={'submenu'}>Upcoming</Tab>
-                </TabList>
+       <Tabs selectedIndex={selectedTab} onSelect={setSelectedTab}>
+            <TabList>
+                <Tab className={'submenu'}>Top Rated</Tab>
+                <Tab className={'submenu'}>Popular</Tab>
+                <Tab className={'submenu'}>Now Playing</Tab>
+                <Tab className={'submenu'}>Upcoming</Tab>
+            </TabList>
 
-                <TabPanel>
-                    <h2>Top Rated</h2>
-                    <PopularMovies/>
-                </TabPanel>
+            <TabPanel>
+                <h2>Top Rated</h2>
+                <TopRatedMovies/>
+            </TabPanel>
 
-                <TabPanel>
-                    <h2>Popular</h2>
-                    <TopRatedMovies/>
-                </TabPanel>
+            <TabPanel>
+                <h2>Popular</h2>
+                <PopularMovies/>
+            </TabPanel>
 
-                <TabPanel>
-                    <h2>Now Playing</h2>
-                    <NowPlayingMovies/>
-                </TabPanel>
+            <TabPanel>
+                <h2>Now Playing</h2>
+                <NowPlayingMovies/>
+            </TabPanel>
 
-                <TabPanel>
-                    <h2>Upcoming</h2>
-                    <UpcomingMovies/>
-                </TabPanel>
+            <TabPanel>
+                <h2>Upcoming</h2>
+                <UpcomingMovies/>
+            </TabPanel>
 
-
-            </Tabs>
-         
-              
-
+        </Tabs>å
   
     </div>
   );
 }
-
 
 export default PageHome;
 

@@ -7,7 +7,6 @@ import FavButton from './FavButton';
 import { useDispatch } from 'react-redux';
 import PageFavs from '../pages/PageFavs';
 
-
 function MovieCard({movie, isFav}) {
     const dispatch = useDispatch();
 
@@ -21,7 +20,7 @@ function MovieCard({movie, isFav}) {
     return (
         <>
         <div>
-        <FavButton singleMovie={movie}/>
+        {/* <FavButton singleMovie={movie}/> */}
             <div>
               <Link to={{
                 pathname:`/moreInfo/${movie.id}/details`,
@@ -38,13 +37,7 @@ function MovieCard({movie, isFav}) {
               <img  src={`${IMG_URL}/original/${movie.poster_path}`}
                     alt={movie.title} />
                 <p className="userscore"> {movie.vote_average}</p>
-                <div className="fav-container">
-                    <PageFavs 
-                        movie={movie} 
-                        favorites={isFav}
-                        handleFavClick={handleFavClick} 
-                    />
-                </div>           
+                <FavButton singleMovie={movie}/>    
               <section className='movie-description'>
                 <p className="description"> {movie.overview}</p>
               </section>

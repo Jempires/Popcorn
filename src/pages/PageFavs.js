@@ -8,7 +8,7 @@ import heart from '../components/images/heart.png';
 function PageFavs () {
 
     const favorites = useSelector((state) => state.favorites.favItems);
-    
+console.log(favorites)
     return (
         <section className="page-favs">
             <h2 className='favs-title'>Favorites Movies</h2>
@@ -24,7 +24,7 @@ function PageFavs () {
                     }
                     )}
                 </div>
-            };
+            }
 
         </section>
     );

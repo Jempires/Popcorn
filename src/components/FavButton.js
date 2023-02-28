@@ -20,12 +20,14 @@ const FavButton = ({favs, singleMovie }) => {
             dispatch(addToFavorites(singleMovie));
         }
     };
-    console.log(favArray);
-
+    if (favArray.length === 0 || singleMovie === undefined)  {
+        return 'hello';
+    }
+    console.log(singleMovie)
     return(
         // Empty div, helps with styling so you're not limited to the divs. helps contain return 
         <>
-        {console.log(favArray)}
+        
         {/* Validates if the favorites movie is already in the fav array. Helps grab correct class */}
         {favArray.findIndex(arrayObject => arrayObject.id === singleMovie.id) > -1 ? 
 

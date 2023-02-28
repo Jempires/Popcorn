@@ -8,28 +8,24 @@
 
 
 import Header from "../components/Header";
-
 import PageHome from "../pages/PageHome";
 import PageAbout from "../pages/PageAbout";
-
 import PageFavs from "../pages/PageFavs";
-
 import PageMoreInfo from "../pages/PageMoreInfo";
-
 import PageNotFound from "../pages/PageNotFound";
 
 // import SingleMovie from './SingleMovie';
 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import React from 'react';
 
 function AppRouter() {
   
     return (
-      <Router>
-        <div className="wrapper">
+      <BrowserRouter>
+        {/* <div className="wrapper"> */}
           <Header />
-          <main>
+          {/* <main> */}
             <Routes>
              
               <Route path="/about" element={<PageAbout />} />
@@ -38,14 +34,11 @@ function AppRouter() {
               <Route path="/moreInfo/id:" element={<PageMoreInfo />} />
               <Route path="*" element={<PageNotFound />} />
     
-
-
             </Routes>
-          </main>
-        </div>
-      </Router>
-
-      
+          {/* </main> */}
+        {/* </div> */}
+      </BrowserRouter>
+     
     );
   }
   
