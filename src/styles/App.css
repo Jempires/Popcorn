@@ -179,12 +179,6 @@ p .about {
   top:60px;
 }
 
-/* Favorites Button */
-.addFav,
-.delFav {
-  max-width: 40px;
-}
-
 
 .more-info {
   background-image: url('../components/images/popcornbgLrg.jpg');
@@ -263,4 +257,11 @@ text-decoration: underline red;
   color:antiquewhite;
   font-size: 1.5rem;
   padding: 20px;
+}
+
+/* Favorites Button */
+.movie-card img.addFav,
+.movie-card img.delFav {
+  width: 60px;
+  height: 60px;
 }
