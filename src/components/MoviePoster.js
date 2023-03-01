@@ -10,5 +10,4 @@ function MoviePosters(props) {
       </div>
     );
   };
-
 export default MoviePosters;

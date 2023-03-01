@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {endPointUpcomingMovies, IMG_URL } from "../globals/globals";
 import userRatingIcon from '../components/images/userRatingIcon.jpg';
 import { Link } from 'react-router-dom';
+import FavButton from './FavButton';
 
 
 const UpcomingMovies = () => {
@@ -30,17 +31,18 @@ const UpcomingMovies = () => {
 
 const MovieCardUpcoming = ({ movie }) => {
   return (
-
+    
     <div>
      
-    {/* onClick={handleClick} */}
+      {/* onClick={handleClick} */}
 
-    <img className="user-icon"  src={userRatingIcon} alt=''/>
- 
-    <div className='movie-card'>
-      <img  src={`${IMG_URL}/original/${movie.poster_path}`}
-                      alt={movie.title} />
-    
+      {/* DO NOT REMOVE THE FAV BUTTON FROM THIS PLACEMENT */}
+      <FavButton singleMovie={movie} />
+      <img className="user-icon"  src={userRatingIcon} alt=''/>
+  
+      <div className='movie-card'>
+        <img src={`${IMG_URL}/original/${movie.poster_path}`}
+            alt={movie.title} />
         <p className="userscore"> {movie.vote_average}</p>
     
       <section className='movie-description'>
@@ -56,9 +58,7 @@ const MovieCardUpcoming = ({ movie }) => {
       </Link> 
     </div>
 
- 
-  
-</div>
+    </div>
 
   );
 };

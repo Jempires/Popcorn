@@ -5,11 +5,9 @@ import tmdbLogo from '../components/images/tmdbLogo.svg';
 import heart from '../components/images/heart.png';
 import logo from '../components/images/logo.png';
 
-
 // import abouticon from '../components/images/abouticon.jpg';
 // import { Link } from "react-router-dom";
-
-//import Nav from '../components/Nav'
+// import Nav from '../components/Nav'
 
 
 function About({title}) {
