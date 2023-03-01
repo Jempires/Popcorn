@@ -31,7 +31,7 @@ const FavButton = ({favs, singleMovie }) => {
         <>
         
         {/* Validates if the favorites movie is already in the fav array. Helps grab correct class */}
-        {favArray.findIndex(arrayObject => arrayObject.id === singleMovie.id) > -1 ? 
+        {favArray?.findIndex(arrayObject => arrayObject?.id === singleMovie?.id) > -1 ? 
 
         // delete fav
         <img src={heartIcon} alt='heart icon' className="delFav" onClick={(e) => handleClick(e, 'delete')} /> :

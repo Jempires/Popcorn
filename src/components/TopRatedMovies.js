@@ -62,22 +62,13 @@ function TopRatedMovies() {
 const MovieCardTopRated = ({ movie }) => {
 
   return (
-    <>
     <div>
-        <div>
-          {/* <Link to={{
-            pathname:`/moreInfo/${movie.id}/details`,
-            state:{movie}
-          }}>
-            <button variant='primary' className='more-info' >View More</button> 
-          </Link>  */}
-        </div>
         {/* onClick={handleClick} */}
-        
+        <div>
         {/* DO NOT REMOVE THE FAV BUTTON FROM THIS PLACEMENT */}
         <FavButton singleMovie={movie} />
         <img className="user-icon"  src={userRatingIcon} alt=''/>
-     
+        </div>
         <div className='movie-card'>
           <img src={`${IMG_URL}/original/${movie.poster_path}`} 
                alt={movie.title} />
@@ -91,15 +82,13 @@ const MovieCardTopRated = ({ movie }) => {
         <div>
           <Link to={{
             pathname:`/moreInfo/${movie.id}`,
-          state:{movie}
-          }}>
+            state:{movie}
+            }}>
             <button variant='primary' className='more-info' >View More</button> 
-            <FavButton/> 
           </Link> 
         </div>
       
     </div>
-    </>
   );
 };
 
