@@ -37,4 +37,5 @@ const PageFavs = () => {
         </section>
         </>
     );
-};
+}
+export default PageFavs;

@@ -62,6 +62,7 @@ const MovieCardNowPlaying = ({ movie }) => {
  
   
 </div>
+</>
   );
 };
 export default NowPlayingMovies;
