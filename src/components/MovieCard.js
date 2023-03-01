@@ -34,9 +34,14 @@ function MovieCard({movie, isFav}) {
           <p className="release-date">Release Date: <br></br> {movie.release_date} </p>
           <p className="description" id="movie-description">{movie.overview}</p>
 
-          <Link to={{ pathname:`/moreInfo/${movie.id}/details`, state:{movie} }}>
-            <button variant='primary' className='more-info'>More Info</button> 
-          </Link> 
+          <div>
+        <Link to={{
+            pathname:`/moreInfo/${movie.id}`,
+        state:{movie}
+        }}>
+            <button variant='primary' className='more-info' >View More</button> 
+        </Link> 
+        </div>
         </div>
 
       </div>    

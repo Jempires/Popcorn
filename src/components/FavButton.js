@@ -21,9 +21,9 @@ const FavButton = ({favs, singleMovie }) => {
             dispatch(addToFavorites(singleMovie));
         }
     };
-    if (favArray.length === 0 || singleMovie === undefined)  {
-        return false;
-    }
+    // if (favArray.length === 0 || singleMovie === undefined)  {
+    //     return false;
+    // }
     console.log(singleMovie);
 
     return(
