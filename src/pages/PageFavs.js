@@ -38,3 +38,5 @@ const PageFavs = () => {
         </>
     );
 };
+
+export default PageFavs;
