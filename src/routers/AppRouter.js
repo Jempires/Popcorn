@@ -34,8 +34,8 @@ function AppRouter() {
              
               <Route path="/about" element={<PageAbout />} />
               <Route path="/" element={<PageHome />} />
+              <Route path="/moreInfo/:id" element={<PageMoreInfo />} />
               <Route path="/favs" element={<PageFavs />} />
-              <Route path="/moreInfo/id:" element={<PageMoreInfo />} />
               <Route path="*" element={<PageNotFound />} />
     
 

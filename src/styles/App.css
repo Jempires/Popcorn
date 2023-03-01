@@ -258,5 +258,13 @@ text-decoration:underline red;
   font-size: 1.5rem;
   padding: 20px;
 
+}
 
+.more-info-pic {
+    max-width: 300px;
+    height:200px;
+}
+
+.more{
+    background-color: black;
 }

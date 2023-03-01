@@ -49,7 +49,7 @@ const MovieCardUpcoming = ({ movie }) => {
     </div>
     <div>
       <Link to={{
-        pathname:`/moreInfo/${movie.id}/details`,
+        pathname:`/moreInfo/${movie.id}`,
       state:{movie}
       }}>
         <button variant='primary' className='more-info' >View More</button> 
