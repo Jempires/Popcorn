@@ -29,9 +29,9 @@ const Nav = () => {
               </li>
 
               <li>
-                <NavLink to="/favs" className="nav-link"> <img className="" src={heart}  style={{ width: '80px', height: '85px', border:'1px solid black' }} alt=''/></NavLink>
+                <NavLink to="/favs" className="nav-link"> <img className="favsPageImg" src={heart}   alt=''/></NavLink>
               </li>  
-         
+              {/* style={{ width: '80px', height: '85px', border:'1px solid black' }} */}
       
               {/* <li>
                 <NavLink to="/toprated" activeClassName="active" className='categories'>Top Rated</NavLink>

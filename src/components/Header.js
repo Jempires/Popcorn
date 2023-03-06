@@ -3,7 +3,7 @@ import React from "react";
 //  import '../styles/Landing.css';
 import Nav from "./Nav";
 import logo  from '../components/images/logo.png';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
  
   

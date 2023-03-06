@@ -18,6 +18,20 @@ header{
   background-color: black;
   margin-bottom:2cm;
   }
+  @media (min-width: 360px) {
+    header{
+       width:100vw;
+    }
+   .nav-link img {
+        position: relative;
+        top:50px;
+
+        width: 40px;
+        height: 45px;
+        border:'1px solid black'; 
+    }
+}
+
 
 h2 {
 
@@ -27,11 +41,69 @@ h2 {
   padding:20px;
 }
 
+.nav-link img {
+    width: '80px';
+    height: '85px';
+    border:'1px solid black'; 
+}
+
 img.header-logo {
   position: relative;
   top:-20px;
   /* height: 180px; 
   width:280px;  */
+}
+@media (max-width: 360px) {
+    img.header-logo {
+        position: relative;
+        top:-20px;
+        width:100px;
+    }
+}
+
+
+/*Styling for mobile header*/
+@media (max-width: 360px) {
+    h1{
+        font-size: 1rem;
+    }
+}
+@media (min-width: 360px) {
+    h2{
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 360px) {
+    .movie-card img {
+        height:300px;
+        width:300px;
+        position: relative;
+        left:23px;
+        top:100px;
+        padding: 10px;
+      
+      }
+      
+div.react-tabs {
+    padding:0px 0px 0px 0px;
+    position: relative;
+    top:20px;
+    right:20px;
+    left:0px;
+    width:86vw;
+    /* background-color: black; */
+  }
+  div.react-tabs {
+    padding:0px 0px 0px 0px;
+    position: relative;
+    top:20px;
+    right:20px;
+    left:140px;
+    width:86vw;
+    /* background-color: black; */
+  }
+
 }
 
 .movies-container {
@@ -111,7 +183,6 @@ a {
   color: firebrick;
 }
 
-
 /* styling for the top nav */
 .nav-link {
   text-decoration: none;
@@ -119,6 +190,15 @@ a {
   color:#ffcc66;
   position: relative;
   top:-150px;
+}
+@media (max-width: 360px) {
+    .nav-link {
+        text-decoration: none;
+        font-size: 1rem;
+        color:#ffcc66;
+        position: relative;
+        /* top:-150px; */
+      }
 }
 
 
