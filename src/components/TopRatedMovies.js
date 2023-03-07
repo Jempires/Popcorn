@@ -62,22 +62,25 @@ function TopRatedMovies() {
 const MovieCardTopRated = ({ movie }) => {
 
   return (
-    <div>
-        {/* onClick={handleClick} */}
-        <div>
-        {/* DO NOT REMOVE THE FAV BUTTON FROM THIS PLACEMENT */}
+    <div className='movie-card'>
+
+      <div className='icons-container'>
         <FavButton singleMovie={movie} />
-        <img className="user-icon"  src={userRatingIcon} alt=''/>
-        </div>
-        <div className='movie-card'>
-          <img src={`${IMG_URL}/original/${movie.poster_path}`} 
-               alt={movie.title} />
+        <div className='ratings'>
           <p className="userscore"> {movie.vote_average}</p>
-        
+          <img className="user-icon" id="user-icon" src={userRatingIcon} alt=''/>
+        </div>
+      </div>
+
+      {/* <div className='movie-card-content'> */}
+        <div className='movie-poster'>
+          <img src={`${IMG_URL}/original/${movie.poster_path}`} alt={movie.title} />
+
           <section className='movie-description'>
             <p className="description"> {movie.overview}</p>
           </section>
         </div>
+      {/* </div> */}
 
         <div>
           <Link to={{

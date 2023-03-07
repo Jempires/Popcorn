@@ -40,7 +40,8 @@ img.header-logo {
   overflow-x: scroll;
   overflow-y: hidden;
   width:82vw;
-  padding-top:0px;
+  padding-top: 0px;
+  gap: 1rem;
 
   /* Hide scrollbar for Chrome, Safari and Opera*/
   -ms-overflow-style: none;  /* IE and Edge */
@@ -53,12 +54,12 @@ img.header-logo {
 
 .movie-card img {
   /* height:300px; */
+  /* position: relative; */
   width:200px;
-  position: relative;
   left:23px;
   top:100px;
-  padding: 10px;
-
+  /* padding: 10px; */
+  border: 1px solid grey;
 }
 
 
@@ -138,24 +139,29 @@ a {
 }
 
 .userscore {
-  /* font-size: 1.75rem; */
-  font-size: 1rem;
+  /* font-size: 1.8rem; */
+  font-size: 1.1rem;
   font-weight: bolder;
-  min-height:100px;
-  max-width: 100px;
-  color:firebrick;
-  position: relative;
-  top:-320px;
-  left:48px;
-  padding-left: 12px;
-  padding-bottom: 20px;
+  /* color:firebrick; */
+  /* min-height:100px;
+  max-width: 100px; */
+  /* position: relative; */
+  /* top:-320px;
+  left:48px; */
+  /* padding-left: 1rem; */
+  /* padding-bottom: 20px; */
  
 }
 
+#user-icon {
+  width: 70px;
+  border: none;
+}
+
 .user-icon {
-  position:relative;
-  left:30px;
+  /* position:relative; */
   /* top:100px; */
+  left:30px;
   width: 70px;
 }
 
@@ -261,7 +267,19 @@ text-decoration: underline red;
 #addFavBtn,
 #delFavBtn {
   width: 45px;
+  height: 45px;
 }
+
+img#addFavBtn,
+img#delFavBtn  {
+  border: none;
+}
+
+/* img#addFavBtn img {
+  max-width: 40px;
+} */
+
+
 
 .more-info-pic {
     max-width: 300px;
@@ -302,6 +320,21 @@ text-decoration: underline red;
   
 }
 
-.hover-userscore:before {
-  background-color: red;
+.icons-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  position: relative;
+}
+
+.userscore {
+  margin-bottom: 0;
+  position: absolute;
+}
+
+.ratings {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
