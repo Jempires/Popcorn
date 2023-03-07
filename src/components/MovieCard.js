@@ -27,21 +27,19 @@ function MovieCard({movie, isFav}) {
         
         <FavButton singleMovie={movie}/>
         <img src={`${IMG_URL}/original/${movie.poster_path}`} alt={`Movie Poster for ${movie.title}`} />
-        <p className="userscore"> {movie.vote_average}</p>
+        <p className="hover-userscore"> {movie.vote_average}</p>
         {/* <FavButton singleMovie={movie}/> */}
 
         <div className="hover-overlay">
           <p className="release-date">Release Date: <br></br> {movie.release_date} </p>
-          <p className="description" id="movie-description">{movie.overview}</p>
-
+          <p className="movie-description" id="movie-description">{movie.overview}</p>
           <div>
-        <Link to={{
-            pathname:`/moreInfo/${movie.id}`,
-        state:{movie}
-        }}>
-            <button variant='primary' className='more-info' >View More</button> 
-        </Link> 
-        </div>
+            <Link to={{
+              pathname:`/moreInfo/${movie.id}`,
+              state:{movie} }}>
+              <button variant='primary' className='more-info-btn'>View More</button> 
+            </Link> 
+          </div>
         </div>
 
       </div>    

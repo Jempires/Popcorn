@@ -52,7 +52,7 @@ img.header-logo {
 }
 
 .movie-card img {
-  height:300px;
+  /* height:300px; */
   width:200px;
   position: relative;
   left:23px;
@@ -103,14 +103,12 @@ ul li  {
   padding: 16px;
   color:#ffcc66;
   font-weight:bolder;
-  margin-top: -3cm;
-  
+  margin-top: -3cm; 
 }
 
 a {
   color: firebrick;
 }
-
 
 /* styling for the top nav */
 .nav-link {
@@ -120,7 +118,6 @@ a {
   position: relative;
   top:-150px;
 }
-
 
 /* Styling for the sub menu */
 .submenu {
@@ -132,13 +129,12 @@ a {
   /* font-size: 1.25rem; */
   /* max-height: 160px;  */
   font-size: 12px;
-  padding: 20px;
+  padding: 10px;
   max-height: 100px; 
   max-width: 300px;
   overflow: hidden;
   text-overflow: ellipsis;
   /* white-space: nowrap; */
-
 }
 
 .userscore {
@@ -178,13 +174,6 @@ p .about {
   left:0px;
   top:60px;
 }
-
-/* Favorites Button */
-.addFav,
-.delFav {
-  max-width: 40px;
-}
-
 
 .more-info {
   background-image: url('../components/images/popcornbgLrg.jpg');
@@ -244,7 +233,7 @@ p .aboutLogo {
 
 }
 
-/* Favorites  */
+/* Favorites */
 
 .page-favs{
   background-color: black;
@@ -266,6 +255,14 @@ text-decoration: underline red;
 
 }
 
+/* Favorites Button */
+#addFav,
+#delFav,
+#addFavBtn,
+#delFavBtn {
+  width: 45px;
+}
+
 .more-info-pic {
     max-width: 300px;
     height:200px;
@@ -273,4 +270,38 @@ text-decoration: underline red;
 
 .more{
     background-color: black;
+}
+
+
+.movie-card-content {
+  padding: 2rem;
+}
+
+.hover-overlay {
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.release-date {
+  font-size: 12px;
+  margin: 0;
+}
+
+#movie-description {
+  font-size: 11px;
+}
+
+.more-info-btn {
+  color: black;
+  font-weight: 700;
+  font-size: 12px;
+  border: none;
+  padding: .2rem .4rem;
+  
+}
+
+.hover-userscore:before {
+  background-color: red;
 }
